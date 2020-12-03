@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/tab_today" android:enabled="true" android:id="@+id/menu_navi_today" android:title="@string/main_navi_today" app:showAsAction="never" />
+    <item android:icon="@drawable/tab_chart" android:enabled="true" android:id="@+id/menu_navi_chart" android:title="@string/main_navi_chart" app:showAsAction="never" />
+    <item android:icon="@drawable/tab_video" android:enabled="true" android:id="@+id/menu_navi_video" android:title="@string/main_navi_videos" app:showAsAction="never" />
+    <item android:icon="@drawable/tab_search" android:enabled="true" android:id="@+id/menu_navi_search" android:title="@string/main_navi_search" app:showAsAction="never" />
+    <item android:icon="@drawable/tab_library" android:enabled="true" android:id="@+id/menu_navi_library" android:title="@string/main_navi_library" app:showAsAction="never" />
+</menu>
