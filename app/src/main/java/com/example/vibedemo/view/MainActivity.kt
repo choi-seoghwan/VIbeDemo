@@ -75,6 +75,7 @@ class MainActivity : BaseKotlinActivity<ActivityMainBinding, MainViewModel>() {
                 player.prepare()
             }
         })
+        viewDataBinding.mainPlayer.viewModel = viewModel
     }
 
     override fun initAfterBinding() {

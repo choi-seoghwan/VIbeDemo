@@ -4,6 +4,8 @@ import android.content.Context
 import android.net.Uri
 import android.util.Log
 import android.view.MenuItem
+import android.view.View
+import android.widget.Button
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.vibedemo.base.BaseKotlinViewModel
@@ -86,7 +88,7 @@ class MainViewModel(private val model: DataModel) : BaseKotlinViewModel() {
                 uri
             )
     }
-    fun onLikeButtonClick() {
-
+    fun onLikeButtonClick(like: View) {
+        like.isSelected = !like.isSelected
     }
 }

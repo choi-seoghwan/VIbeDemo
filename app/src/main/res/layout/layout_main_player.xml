@@ -181,7 +181,7 @@
                         android:layout_gravity="center"
                         android:background="@drawable/selector_icon_player_like"
                         android:contentDescription="@string/player_like"
-                        android:onClick="@{()->viewModel.onLikeButtonClick()}"/>
+                        android:onClick="@{(view)->viewModel.onLikeButtonClick(view)}"/>
 
                     <Button
                         android:id="@+id/main_player_dislike"
