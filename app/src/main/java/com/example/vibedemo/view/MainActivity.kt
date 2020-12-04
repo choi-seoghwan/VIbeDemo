@@ -7,7 +7,6 @@ import com.example.vibedemo.base.BaseKotlinActivity
 import com.example.vibedemo.databinding.ActivityMainBinding
 import com.example.vibedemo.view.fragment.*
 import com.example.vibedemo.viewmodel.MainViewModel
-import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : BaseKotlinActivity<ActivityMainBinding, MainViewModel>() {
@@ -16,14 +15,18 @@ class MainActivity : BaseKotlinActivity<ActivityMainBinding, MainViewModel>() {
     override val viewModel: MainViewModel by viewModel()
 
     override fun initStartView() {
-
+        //Main-Layout에서만 사용되므로 View-binding으로 제공
+        viewDataBinding.mainBottomNavigation.setOnNavigationItemSelectedListener { menuItem ->
+            viewModel.selectMenu(menuItem)
+            true
+        }
     }
 
     override fun initDataBinding() {
 
-        viewModel.selectedMenu.observe(this, Observer { menuItemId ->
-            var fragment : Fragment? = null
-            when (menuItemId) {
+        viewModel.selectedMenu.observe(this, Observer { menuItem ->
+            var fragment : Fragment = TodayFragment()
+            when (menuItem.itemId) {
                 R.id.menu_navi_today -> {
                     fragment = TodayFragment()
                 }
@@ -40,15 +43,11 @@ class MainActivity : BaseKotlinActivity<ActivityMainBinding, MainViewModel>() {
                     fragment = MyFragment()
                 }
             }
-            supportFragmentManager.beginTransaction().replace(fragment_layout.id, fragment!!).commit()
+            supportFragmentManager.beginTransaction().replace(binding.fragmentLayout.id, fragment).commit()
         })
     }
 
     override fun initAfterBinding() {
-        main_bottom_navigation.setOnNavigationItemSelectedListener { menuItem ->
-            viewModel.selectMenu(menuItem.itemId)
-            true
-        }
-        main_bottom_navigation.selectedItemId = R.id.menu_navi_today
+        viewDataBinding.mainBottomNavigation.selectedItemId = R.id.menu_navi_today
     }
 }
