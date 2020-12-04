@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/main_player_top_height">
+
+        <ImageView
+            android:id="@+id/main_player_setting"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18.0dip"
+            android:contentDescription="@string/player_setting"
+            android:src="@drawable/btn_main_player_setting"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/main_player_eq"
+            android:layout_width="32.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18.0dip"
+            android:layout_toRightOf="@id/main_player_setting"
+            android:contentDescription="@string/player_equalize"
+            android:scaleType="center"
+            android:src="@drawable/selector_icon_player_eq"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/main_player_fold"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/main_player_top_right_margin"
+            android:contentDescription="@string/player_fold"
+            android:scaleType="center"
+            android:src="@drawable/icon_main_player_fold" />
+
+    </RelativeLayout>
+</layout>

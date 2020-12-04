@@ -1,4 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="bottom_navigation_height">54.0dip</dimen>
+
+    <!-- MINI PLAYER -->
+    <dimen name="mini_player_height">56.0dip</dimen>
+    <dimen name="mini_player_button_height">54.0dip</dimen>
+
+    <!-- MAIN PLAYER -->
+    <dimen name="main_control_height">106.0dip</dimen>
+    <dimen name="main_player_top_height">52.0dip</dimen>
+    <dimen name="main_player_top_right_margin">18.0dip</dimen>
+    <dimen name="main_player_margin">24.0dip</dimen>
+
+    <!-- MAIN PLAYER BOTTOM -->
+    <dimen name="main_player_bottom_height">149.0dip</dimen>
+    <dimen name="main_player_bottom_seek_bar_height">31.0dip</dimen>
+    <dimen name="main_player_bottom_control_height">73.0dip</dimen>
+    <dimen name="main_player_control_button">55.0dip</dimen>
+    <dimen name="main_player_tool_height">45.0dip</dimen>
+
+    <!-- SEEK BAR -->
+    <dimen name="seek_bar_moving_text_padding">4.0dip</dimen>
+    <dimen name="seek_bar_moving_text_bottom">12.0dip</dimen>
+    <dimen name="seek_bar_moving_text_background">80.0dip</dimen>
+    <dimen name="seek_bar_height_basic">3.0dip</dimen>
+    <dimen name="seek_bar_thumb_size">14.0dip</dimen>
+
+    <dimen name="main_player_list_bottom_height">80.0dip</dimen>
 </resources>

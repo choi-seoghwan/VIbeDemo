@@ -75,6 +75,14 @@ dependencies {
     // Bottom Navigation
     implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
 
+    // sliding-up
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
+    // EXO-player
+    implementation "com.google.android.exoplayer:exoplayer-core:2.12.0"
+    implementation "com.google.android.exoplayer:exoplayer-ui:2.12.0"
+    implementation "com.google.android.exoplayer:exoplayer-hls:2.12.0"
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

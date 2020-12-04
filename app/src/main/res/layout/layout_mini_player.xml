@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View"/>
+        <variable name="music" type="com.example.vibedemo.model.response.MusicResponse" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/mini_player_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/mini_player_bg"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="2.0dip">
+
+                <com.google.android.exoplayer2.ui.DefaultTimeBar
+                    android:id="@+id/exo_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2.0dip"
+                    app:played_color="@color/player_seek_bar_play"
+                    app:unplayed_color="@color/player_seek_bar_unplay" />
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/mini_player_button_height">
+
+                <com.google.android.exoplayer2.ui.PlayerControlView
+                    android:id="@+id/controller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/mini_player_button_height"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:importantForAccessibility="no"
+                    app:controller_layout_id="@layout/layout_mini_player_controller"
+                    app:hide_on_touch="false"
+                    app:show_timeout="0"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@id/controller"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="20.0dip"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mini_player_title"
+                                android:text="@{music.title}"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:fontFamily="@font/sans_medium"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="@color/text_color_06"
+                                android:textSize="14.0dip"
+                                tools:ignore="EllipsizeMaxLines">
+
+                                <requestFocus
+                                    android:duplicateParentState="true"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true" />
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/mini_player_singer"
+                                android:text="@{music.singer}"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/sans_medium"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="@color/mini_player_singer"
+                                android:textSize="11.0dip" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

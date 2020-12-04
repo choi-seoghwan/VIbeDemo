@@ -5,4 +5,35 @@
     <string name="main_navi_today">투데이</string>
     <string name="main_navi_videos">비디오</string>
     <string name="main_navi_chart">차트</string>
+
+    <!-- PLAYER BOTTOM -->
+    <string name="player_repeat">재생목록 반복</string>
+    <string name="player_prev">이전곡</string>
+    <string name="player_next">다음곡</string>
+    <string name="player_shuffle">재생목록 셔플</string>
+    <string name="player_list">재생목록 열기</string>
+
+    <!-- PLAYER TOP -->
+    <string name="player_setting">재생환경 설정 열기</string>
+    <string name="player_equalize">이퀄라이저 열기</string>
+    <string name="player_fold">플레이어 접기</string>
+    <string name="player_more">더보기</string>
+
+    <!-- PLAYER MIDDLE -->
+    <string name="player_lyric">전체 가사 보기</string>
+    <string name="player_like">좋아요</string>
+    <string name="player_dislike">이 곡 안듣기</string>
+
+    <!-- PLAYER BOTTOM -->
+    <string name="player_share_sns">스토리 공유하기</string>
+    <string name="similar_track">유사곡</string>
+
+    <!-- LYRICS TOP -->
+    <string name="lyrics_close">닫기</string>
+
+    <string name="player_repeat_n">반복없음</string>
+    <string name="player_repeat_1">하나반복</string>
+    <string name="player_repeat_a">모두반복</string>
+
+
 </resources>
